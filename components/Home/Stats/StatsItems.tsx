@@ -1,5 +1,5 @@
 
-const card = `p-2 flex justify-between gap-1 items-start flex-col`
+const card = `w-full h-full p-2 flex justify-between items-center`
 const title = `text-sm`
 const value = `text-lg`
 

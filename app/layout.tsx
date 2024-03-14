@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import "./globals.css";
 import { Providers } from "@/providers";
-import SideBar from '../components/Sidebar/Sidebar';
+import SideBar from "../components/Sidebar/Sidebar";
 import Header from "@/components/Header/Header";
 import DashNotes from "@/components/Home/DashNotes";
 
@@ -17,8 +17,7 @@ export default function RootLayout({
   children,
   dashtasks,
   dashprojects,
-  dashteam
-
+  dashteam,
 }: Readonly<{
   children: React.ReactNode;
   dashtasks: React.ReactNode;
@@ -31,18 +30,17 @@ export default function RootLayout({
         <Providers>
           <main className="flex justify-start items-start">
             <section className="w-1/5">
-             <SideBar/>
+              <SideBar />
             </section>
-            <section className="w-4/5 p-2 flex flex-col gap-2">
-              <Header/>
-              <div className="flex flex-col gap-2">
-                {children}
-                <div className={`h-[600px] w-full  grid grid-cols-2 grid-rows-2 gap-2`}>
-                  {dashtasks}
-                  {dashprojects}
-                  {dashteam}
-                  <DashNotes/>
-                </div>
+            <section className="w-4/5 p-2 flex flex-col gap-2 h-screen overflow-y-hidden bg-teal-700">
+              <Header />
+              <div>{children}</div>
+              <div
+                className={`h-[600px] w-full  grid grid-cols-2 grid-rows-2 gap-2`}>
+                {dashtasks}
+                {dashprojects}
+                {dashteam}
+                <DashNotes />
               </div>
             </section>
           </main>

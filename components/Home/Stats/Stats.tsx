@@ -4,7 +4,7 @@ import { AssignedTasks, CompletedTasks, TotalProjects, TotalTasks } from "./Stat
 
 export default function Stats() {
     return (
-        <div className="w-full grid grid-cols-4 border-dashed rounded-large divide-x divide-dashed border-1 border-slate-400">
+        <div className="w-full divide-x-1 divide-dashed h-12 grid grid-cols-4 border-dashed rounded-large border-1 border-slate-400 items-center">
             <TotalProjects />
             <TotalTasks/>
             <AssignedTasks/>

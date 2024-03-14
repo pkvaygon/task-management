@@ -10,7 +10,7 @@ export default function DashNotes() {
     const [value, setValue] = React.useState('')
     return (
         <>
-        <Textarea maxRows={11} onValueChange={setValue} fullWidth variant="bordered" classNames={{
+        <Textarea maxRows={11} onValueChange={setValue} fullWidth classNames={{
             base: `h-full ${pathname !== "/" ? "hidden" : ""}`,
             mainWrapper: "h-full",
             innerWrapper: "h-full",
