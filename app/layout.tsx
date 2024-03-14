@@ -4,6 +4,7 @@ import "./globals.css";
 import { Providers } from "@/providers";
 import SideBar from '../components/Sidebar/Sidebar';
 import Header from "@/components/Header/Header";
+import DashNotes from "@/components/Home/DashNotes";
 
 const poppins = Poppins({ weight: ["500"], subsets: ["devanagari"] });
 
@@ -40,6 +41,7 @@ export default function RootLayout({
                   {dashtasks}
                   {dashprojects}
                   {dashteam}
+                  <DashNotes/>
                 </div>
               </div>
             </section>
