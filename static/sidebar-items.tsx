@@ -18,19 +18,19 @@ export const sidebarItems: SidebarItem[] = [
     icon: "solar:home-2-linear",
     title: "Home",
   },
-  {
-    key: "projects",
-    href: "/projects",
-    icon: "solar:widget-2-outline",
-    title: "Projects",
-    endContent: (
-      <Icon
-        className="text-default-400"
-        icon="solar:add-circle-line-duotone"
-        width={24}
-      />
-    ),
-  },
+  // {
+  //   key: "projects",
+  //   href: "/projects",
+  //   icon: "solar:widget-2-outline",
+  //   title: "Projects",
+  //   endContent: (
+  //     <Icon
+  //       className="text-default-400"
+  //       icon="solar:add-circle-line-duotone"
+  //       width={24}
+  //     />
+  //   ),
+  // },
   {
     key: "tasks",
     href: "/tasks",

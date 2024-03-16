@@ -8,7 +8,12 @@ const config: Config = {
     "./node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        darkbg: "#3F3F46",
+        zinc500: "#71717A",
+      },
+    },
   },
   darkMode: "class",
   plugins: [nextui()],

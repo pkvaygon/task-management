@@ -12,7 +12,6 @@ import { Icon } from "@iconify/react";
 import { ThemeSwitcher } from "@/components/ThemeSwitcher";
 import SidebarLinks from "@/components/Sidebar/SideBarLinks";
 import { LogoIcon } from "@/icons";
-import {sidebarItems} from '@/static/sidebar-items'
 
 export default function SideBar() {
     return (

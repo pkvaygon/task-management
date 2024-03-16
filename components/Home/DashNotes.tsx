@@ -1,22 +1,18 @@
-"use client";
-
-import { Textarea } from "@nextui-org/react";
-import { usePathname } from "next/navigation";
-import React from "react";
-
+import { testNotes } from "@/utils";
 
 export default function DashNotes() {
-    const pathname = usePathname()
-    const [value, setValue] = React.useState('')
-    return (
-        <>
-        <Textarea maxRows={11} onValueChange={setValue} fullWidth classNames={{
-            base: `h-full ${pathname !== "/" ? "hidden" : ""}`,
-            mainWrapper: "h-full",
-            innerWrapper: "h-full",
-            inputWrapper: 'min-h-full'
-            }} label="Notes" />
-        </>
-        )
-
+  const notes = testNotes();
+  return (
+    <form action="" className="dark:bg-darkbg bg-zinc-600 rounded-large p-3">
+      <label
+        htmlFor="notes"
+        className="block text-sm font-medium text-white dark:text-gray-300">
+        Notes
+      </label>
+      <textarea
+        defaultValue={notes}
+        id="notes"
+        className="min-w-full outline-none  text-white min-h-full  resize-none text-sm bg-transparent"></textarea>
+    </form>
+  );
 }

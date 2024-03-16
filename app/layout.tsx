@@ -4,7 +4,6 @@ import "./globals.css";
 import { Providers } from "@/providers";
 import SideBar from "../components/Sidebar/Sidebar";
 import Header from "@/components/Header/Header";
-import DashNotes from "@/components/Home/DashNotes";
 
 const poppins = Poppins({ weight: ["500"], subsets: ["devanagari"] });
 
@@ -15,14 +14,8 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-  dashtasks,
-  dashprojects,
-  dashteam,
 }: Readonly<{
   children: React.ReactNode;
-  dashtasks: React.ReactNode;
-  dashprojects: React.ReactNode;
-  dashteam: React.ReactNode;
 }>) {
   return (
     <html lang="en">
@@ -32,16 +25,9 @@ export default function RootLayout({
             <section className="w-1/5">
               <SideBar />
             </section>
-            <section className="w-4/5 p-2 flex flex-col gap-2 h-screen overflow-y-hidden bg-teal-700">
+            <section className="w-4/5 p-2 flex flex-col gap-2 h-screen overflow-y-hidden">
               <Header />
-              <div>{children}</div>
-              <div
-                className={`h-[600px] w-full  grid grid-cols-2 grid-rows-2 gap-2`}>
-                {dashtasks}
-                {dashprojects}
-                {dashteam}
-                <DashNotes />
-              </div>
+              {children}
             </section>
           </main>
         </Providers>
