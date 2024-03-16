@@ -2,6 +2,7 @@
 import React from "react";
 import {Navbar, NavbarBrand, NavbarContent, NavbarItem, Link, DropdownItem, DropdownTrigger, Dropdown, DropdownMenu, Avatar} from "@nextui-org/react";
 import { LogoIcon } from "@/icons";
+import { ThemeSwitcher } from "../ThemeSwitcher";
 
 export default function Header() {
   return (
@@ -34,12 +35,13 @@ export default function Header() {
               <p className="font-semibold">Signed in as</p>
               <p className="font-semibold">askardev@gmail.com</p>
             </DropdownItem>
+            <DropdownItem key="analytics">
+              <ThemeSwitcher/>
+            </DropdownItem>
             <DropdownItem key="settings">My Settings</DropdownItem>
             <DropdownItem key="team_settings">Team Settings</DropdownItem>
             <DropdownItem key="analytics">Analytics</DropdownItem>
-            <DropdownItem key="system">System</DropdownItem>
-            <DropdownItem key="configurations">Configurations</DropdownItem>
-            <DropdownItem key="help_and_feedback">Help & Feedback</DropdownItem>
+            
             <DropdownItem key="logout" color="danger">
               Log Out
             </DropdownItem>

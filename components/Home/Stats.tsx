@@ -6,9 +6,9 @@ export default function Stats() {
       {staticStats.map((stat) => (
         <div
           key={stat.key}
-          className="w-full h-full p-2 flex justify-between items-center">
-          <h6 className="text-sm">{stat.title}</h6>
-          <span className="text-lg">{stat.value}</span>
+          className="w-full h-full p-2 flex max-sm:items-start justify-between items-center">
+          <h6 className="text-sm max-sm:text-[10px]">{stat.title}</h6>
+          <span className="text-lg max-sm:text-xs">{stat.value}</span>
         </div>
       ))}
     </div>
