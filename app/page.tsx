@@ -13,7 +13,7 @@ export default function Home() {
       <div className="grid grid-cols-2 h-[calc(100vh-130px)] overflow-hidden gap-2 grid-rows-2 rounded-large transition ease-in-out">
         <DashTasks />
         <DashProjects />
-        <DashTeam/>
+        <DashTeam />
         <DashNotes />
       </div>
     </section>

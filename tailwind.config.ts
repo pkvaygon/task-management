@@ -9,6 +9,9 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      boxShadow: {
+        "3xlin": "inset 10px 10px 20px 10px rgb(0 0 0 / 0.05)",
+      },
       colors: {
         darkbg: "#3F3F46",
         zinc500: "#71717A",

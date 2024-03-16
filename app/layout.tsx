@@ -22,10 +22,10 @@ export default function RootLayout({
       <body className={poppins.className}>
         <Providers>
           <main className="flex justify-start items-start">
-            <section className="w-1/5 max-sm:hidden">
+            {/* <section className="w-1/5 max-sm:hidden">
               <SideBar />
-            </section>
-            <section className="w-4/5 max-sm:w-full p-2 flex flex-col gap-2 h-screen overflow-y-hidden">
+            </section> */}
+            <section className="w-full max-sm:w-full p-2 flex flex-col gap-2 h-screen overflow-y-hidden">
               <Header />
               {children}
             </section>

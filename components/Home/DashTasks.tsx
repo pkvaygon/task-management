@@ -1,6 +1,7 @@
 import { ShowIcon } from "@/icons";
 import { testTasks } from "@/utils";
 import Image from "next/image";
+import Link from "next/link";
 export default function DashTasks() {
   return (
     <section className="hover:row-span-3 bg-green-200 w-full p-3 overflow-y-auto h-full rounded-large dark:bg-darkbg flex flex-col gap-2 transition-all ease-in-out">
@@ -9,7 +10,9 @@ export default function DashTasks() {
     </div>
     {testTasks.length > 0 ? (
       testTasks.map((task) => (
-        <div
+        <Link
+          target="_blank"
+          href={`/tasks/${task.taskId}`}
           className="flex justify-between bg-zinc-50 items-center rounded-large p-2 dark:bg-zinc-500"
           key={task.taskId}>
           <div>
@@ -21,7 +24,7 @@ export default function DashTasks() {
           <div className="hover:scale-125">
             <ShowIcon width={24} />
           </div>
-        </div>
+        </Link>
       ))
     ) : (
       <div className="flex flex-col justify-start items-center">

@@ -25,8 +25,9 @@ export const testProjects = [
     projectId: "projectId1",
     manager: "AskarManager",
     name: "TechnoPolis",
-    description: "Some description",
-    status: "in process",
+    description:
+      "Develop a new feature for the website that allows users to reset their passwords",
+    status: "pending",
     start_date: new Date(),
     end_date: new Date(),
     members: ["memberId1"],
@@ -43,19 +44,28 @@ export const testTasks = [
     project: "string",
     name: "Task 1",
     label: "Make Home Page of CRM",
-    description: "string",
-    status: "string",
+    description:
+      "Develop a new feature for the website that allows users to reset their passwords",
+    status: "pending",
     priority: "string",
     members: ["memberId1"],
     files: [],
-    change_log: "string",
+    change_log: [
+      {
+        logId: "1",
+        memberId: "memberId1",
+        date: new Date().toLocaleDateString(),
+        description: "Fetch data has been changed",
+      },
+    ],
+    due_date: new Date(),
   },
 ];
 export const testMembers = [
   {
     memberId: "memberId1",
     role: "string",
-    fullname: "string",
+    fullname: "Askar Fr Developer",
     email: "string",
     assigned_projects: [],
     assigned_tasks: ["taskId1"],
