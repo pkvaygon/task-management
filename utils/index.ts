@@ -52,13 +52,19 @@ export const testTasks = [
     files: [],
     change_log: [
       {
-        logId: "1",
         memberId: "memberId1",
         date: new Date().toLocaleDateString(),
         description: "Fetch data has been changed",
       },
     ],
     due_date: new Date(),
+    subtasks: [
+      {
+        name: "use Zod and React Formik",
+        status: "pending",
+        description: "subtask1 is pending (description)",
+      },
+    ],
   },
 ];
 export const testMembers = [

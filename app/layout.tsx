@@ -5,7 +5,7 @@ import { Providers } from "@/providers";
 import SideBar from "../components/Sidebar/Sidebar";
 import Header from "@/components/Header/Header";
 
-const poppins = Poppins({ weight: ["500"], subsets: ["devanagari"] });
+const poppins = Poppins({ weight: ["500"], subsets: ["devanagari"], style: ["normal"] });
 
 export const metadata: Metadata = {
   title: "Task Management Next Js",
